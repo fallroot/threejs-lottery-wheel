@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/lottery.css">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Coming+Soon'>
+    </head>
+    <body>
+        <footer>
+            <p><a href="http://mrdoob.github.com/three.js/">Three.js</a> Lottery Wheel by <a href="http://twitter.com/fallroot">@fallroot</a> in <a href="https://github.com/fallroot/threejs-lottery-wheel">GitHub</a></p>
+            <button id="draw">Draw</button>
+        </footer>
+        <script src="js/lib/Three.js"></script>
+        <script src="js/src/lottery.js"></script>
+        <script>
+            Lottery.init({
+                digit: 4
+            });
+
+            document.getElementById('draw').addEventListener('click', function() {
+                Lottery.draw();
+            });
+        </script>
+    </body>
+</html>
